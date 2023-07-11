@@ -1,6 +1,20 @@
 let url = "https://restcountries.com/v3.1/lang/spanish";
 let array = [];
-
+function mostrarTodo() {
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(item) {
+      console.log(item);
+      array = item.slice(0, 5);//mostramos solo 5 datos de la api
+      actualizarTablaHtml();
+      console.table(array);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}
 
 let pais = document.getElementById('pais');
 let capital = document.getElementById('capital');
