@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap-5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./lib/bootstrap-5.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+         <!--barra de navegacion--> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary "data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Prueba N°3</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Prueba 1: ✅</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link disabled dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Prueba 2: ✅
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sufrimiento</a></li>
+                  <li><a class="dropdown-item" href="#">Facilito</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">izi pizi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Prueba 3: 😥</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- fin de la barra de navegacion -->
+    <!-- inicio de contenedor principal -->
+    <div class="container-fluid">
+        <div class="card mt-2">
+            <div class="card-header">
+                <h3>Api utilizada: https://restcountries.com/v3.1/lang/spanish</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Ingreso de datos</h2>
+                        <hr>
+                        <div class="mb-2">
+                            <label for="pais">País</label>
+                            <input 
+                                type="text"
+                                id="pais"
+                                placeholder="ingrese país"
+                                maxlength="10"
+                                class="form-control"
+                            >
+                            <span id="validPais"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label for="capital">Capital</label>
+                            <input 
+                                type="text"
+                                id="capital"
+                                class="form-control"
+                                placeholder="ingrese capital"
+                                maxlength="25"
+                                >
+                                <span id="validCapital"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label for="Subregion">Region</label>
+                            <input
+                                type="text"
+                                id="subregion" 
+                                placeholder="ingrese region"
+                                maxlength="25"
+                                class="form-control"
+                                >
+                                <span id="validSubregion"></span>
+                        </div>
+                        <div class="mb-2">
+                          <label for="population">Población</label>
+                          <input
+                              type="number"
+                              id="population" 
+                              placeholder="ingrese poblacion"
+                              maxlength="25"
+                              class="form-control"
+                              >
+                              <span id="validPoblacion"></span>
+                      </div>
+                        <div class="mb-1">
+                            <input onclick="leerInputForm();" type="button" value="Guardar" class="btn btn-success">
+                            <input onclick="mostrarTodo();" type="button" value="Generar-API" class="btn btn-success">
+                          </div>
+                    </div>
+                    <!--listado-->
+                    <div class="col-md-6">
+                        <h2>Tabla de datos</h2>                        
+                        <hr>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="table-dark">
+                                    <tr class="table-primary">
+                                        <th>País</th>
+                                        <th>Capital</th>
+                                        <th>Region</th>
+                                        <th>Población</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-info" id="data">
+                                  
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-body-secondary">
+                Maikol Cea Abarzua.
+            </div>
+        </div>
+    </div>
+    <!-- fin del contenedor principal -->
+    <script src="./js/main.js"></script> <!--llamado al codigo js-->
+</body>
+
+</html>
