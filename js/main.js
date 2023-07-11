@@ -1,5 +1,7 @@
 let url = "https://restcountries.com/v3.1/lang/spanish";
 let array = [];
+mostrarTodo();
+//mostramos desde el principio la api
 function mostrarTodo() {
   fetch(url)
     .then(function(response) {
